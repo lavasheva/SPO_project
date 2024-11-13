@@ -1,0 +1,367 @@
+body, h2, h3, h4, button, input, textarea {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+#login-form {
+    margin-left: 20px;
+    margin-right: 50px;
+}
+
+.phone-frame {
+    width: 375px;
+    height: 667px;
+    border: 16px solid #000;
+    border-radius: 36px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.phone-frame::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-color: #333;
+    border-radius: 36px 36px 0 0;
+}
+
+.screen {
+    display: none;
+    background-color: rgb(255, 147, 85);
+    color: #000;
+    height: calc(100% - 20px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.screen.active {
+    display: flex;
+}
+
+#screen1 {
+    align-items: center; 
+    justify-content: center; 
+}
+
+#screen2 {
+    align-items: center; 
+    justify-content: center; 
+}
+
+header {
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 40px;
+}
+
+#screen2 button {
+    margin-left: 140px;
+    background-color: #333; 
+}
+
+#but button {
+    background-color: transparent;
+    border: 4px solid #333;
+    border-radius: 15px; 
+    width: 350px;
+    margin-left: 15px;
+    color: #333;
+    margin-top: 20px;
+}
+
+#screen3 button {
+    background-color: #ffffff;
+    width: 100px;
+    margin-top: 255px;
+}
+
+#screen6 nav button {
+    background-color: white; 
+    width: 100%; 
+    margin-top: 200px;
+}
+
+#add_button button {
+    background-color: #333;
+    width: 200px;
+    margin-left: 90px;
+}
+
+#screen4 nav button {
+    margin-top: 80px;
+    background-color: white; 
+    width: 100px;
+}
+
+#screen5 nav button {
+    background-color: white; 
+    width: 100px;
+    margin-top: 12px;
+}
+
+.profile img {
+    border-radius: 10em; 
+    margin-left: 90px;
+    margin-top: 20px;
+}
+
+.profile #button_1 {
+    background-color: #333; 
+    margin-left: 100px;
+}
+
+.events-tabs button {
+    background-color: #333; 
+}
+
+button {
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#screen2 input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+}
+
+#screen3 input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+}
+
+#screen5 h3 {
+    margin-left: 105px;
+}
+
+#screen5 h4 {
+    margin-left: 135px;
+}
+
+#create-event-form-in input, textarea {
+    width: 90%;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 7px;
+    border: 1px solid #ccc;
+}
+
+#create-event-form label {
+    margin-left: 7px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0px;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible{
+    display: flex;
+}
+
+.toggle-container {
+    position: relative;
+    display: flex;
+    background-color: #ddd;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+.toggle-button {
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+    color: #333;
+    z-index: 1;
+    transition: color 0.4s;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #333;
+    transition: 0.4s;
+    z-index: 0;
+}
+
+.toggle-button.active {
+    color: #ffffff;
+}
+
+.content-panel {
+    display: none;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.content-panel.active {
+    display: block;
+}
+
+.chat-list {
+    max-width: 600px;
+    margin-top: 30px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #333;
+    width: 100%;
+}
+
+.chat-item {
+    display: flex;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.chat-item:hover {
+    background: #f9f9f9;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.chat-details {
+    flex-grow: 1;
+}
+
+.chat-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.last-message {
+    color: #888;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.calendar-container {
+    width: 185px;
+    height: 185px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+.map-container {
+    width: 100px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+#calendar::before {
+    content: "Календарь";
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#map::before {
+    content: "Карта";
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#calendar2 {
+    width: 100%;
+    font: monospace;
+    line-height: 1.2em;
+    font-size: 15px;
+    text-align: center;
+}
+
+#calendar2 thead tr:last-child {
+    font-size: small;
+    color: rgb(85, 85, 85);
+}
+
+#calendar2 thead tr:nth-child(1) td:nth-child(2) {
+    color: rgb(50, 50, 50);
+}
+
+#calendar2 thead tr:nth-child(1) td:nth-child(1):hover, #calendar2 thead tr:nth-child(1) td:nth-child(3):hover {
+    cursor: pointer;
+}
+
+#calendar2 tbody td {
+    color: rgb(44, 86, 122);
+}
+
+#calendar2 tbody td:nth-child(n+6), #calendar2 .holiday {
+    color: rgb(231, 140, 92);
+}
+
+#calendar2 tbody td.today {
+    background: rgb(220, 0, 0);
+    color: #fff;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+    padding-left: 30px;
+    background-image: url('i.webp');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 20px 20px;
+}
+
+
+.fixed-size {
+    width: 335px;
+    height: 90px;
+    resize: none;  
+}
